@@ -1,0 +1,9 @@
+graph G {
+    "LEGO" -- "EGO";
+    "LGO" -- "EGO";
+    "LEGO" -- "LGO";
+    "ALGO" -- "LGO";
+    "ALGO" -- "ALPGO";
+    "ALPGO" -- "ALPHGO";
+    "ALPHGO" -- "ALPHAGO";
+}

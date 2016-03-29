@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+\draw[rounded corners=2mm,->,thick,>=stealth] (0,0) -- (2,0) -- (0,2) -- (2,2) -- (0,0) -- (0,2) -- (1,3) -- (2,2) -- (2,0);
+\begin{scope}[xshift=3cm]
+\node[circle,draw] (00) at (0,0) {3};
+\node[circle,draw] (20) at (2,0) {3};
+\node[circle,draw] (02) at (0,2) {4};
+\node[circle,draw] (22) at (2,2) {4};
+\node[circle,draw] (13) at (1,3) {2};
+\draw (00) edge (20) edge (02) edge (22);
+\draw (02) edge (22) edge (20);
+\draw (13) edge (02) edge (22);
+\draw (22) edge (20);
+\end{scope}
+\end{tikzpicture}
+\end{document}

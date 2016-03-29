@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{xltxtra}
+\setromanfont{Gill Sans}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+%\draw[->,ultra thick,>=stealth] (1.5,4.5) -- ++(0,-1);
+%\draw[->,ultra thick,>=stealth] (1.5,-0.5) -- ++(0,-1);
+\draw[very thick,white] (0,4) -- (0,-1);
+%\draw[very thick] (3,-1) -- ++(0,5);
+%\draw[very thick] (0,0) -- ++(3,0);
+%\draw[very thick] (0,1) -- ++(3,0);
+%\draw[very thick] (0,2) -- ++(3,0);
+%\draw[very thick] (0,3) -- ++(3,0);
+%\node at (1.5,0.5) {bouteille};
+%\node at (1.5,1.5) {poireaux};
+%\node at (1.5,2.5) {œufs};
+\node at (7.5,2) {\includegraphics[width=6cm]{counter}}; % 4.5 - 10.5
+%\draw[fill=white,very thick] (4.2,2.5) rectangle ++(3,1);
+%\draw[fill=white,very thick] (7.8,2.5) rectangle ++(3,1);
+%\node at (5.7,3) {poireaux};
+%\node at (9.3,3) {bouteille};
+\begin{scope}[xshift=12cm]
+\draw[->,ultra thick,>=stealth] (1.5,4.5) -- ++(0,-1);
+\draw[very thick] (0,4) -- (0,-1);
+\draw[very thick] (3,-1) -- ++(0,5);
+\draw[very thick] (0,0) -- ++(3,0);
+\draw[very thick] (0,1) -- ++(3,0);
+\draw[very thick] (0,2) -- ++(3,0);
+\draw[very thick] (0,3) -- ++(3,0);
+\node at (1.5,0.5) {bouteille};
+\node at (1.5,1.5) {poireaux};
+\node at (1.5,2.5) {œufs};
+\node[black] at (1.5,-0.8) {\fontsize{21}{21}\selectfont \textbackslash o/};
+\end{scope}
+\end{tikzpicture}
+\end{document}
