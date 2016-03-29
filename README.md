@@ -2,7 +2,9 @@
 
 ## TryAlgo in Paris
 
-Pour lancer le notebook Jupyter, entrez les commandes suivantes :
+Essayez notre code de façon interactive : [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/jilljenn/128algos)
+
+Ou alors, pour lancer le notebook Jupyter sur votre machine, clonez ce repo puis entrez les commandes suivantes :
 
     python3 -m venv venv
     . venv/bin/activate
