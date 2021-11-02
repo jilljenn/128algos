@@ -1,5 +1,5 @@
 % 128 algorithmes
-% Jill-Jênn Vie \and Christoph Dürr
+% Jill-Jênn Vie; Christoph Dürr
 % 29 mars 2016
 
 # Notre contribution

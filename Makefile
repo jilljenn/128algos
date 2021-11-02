@@ -1,15 +1,17 @@
-all:
-	pandoc -t beamer intro.md -o intro.pdf
-	pandoc -t beamer structures.md -o structures.pdf
-	pandoc -t beamer taxis.md -o taxis.pdf
-	pandoc -t beamer graphes.md -o graphes.pdf
-	pandoc -t beamer extras.md -o extras.pdf
-	# open intro.pdf
-	# open structures.pdf
-	# open taxis.pdf
-	open graphes.pdf
-	# open extras.pdf
+SLIDES_PDF=intro.pdf structures.pdf taxis.pdf graphes.pdf extras.pdf
+FIGURES_DOT=$(wildcard *.dot)
+FIGURES_PDF=$(FIGURES_DOT:.dot=.pdf) euler.pdf euler-paris.pdf levenshtein.pdf
 
-levenshtein:
-	dot -Tpdf levenshtein.dot > levenshtein.pdf
-	open levenshtein.pdf
+all: $(FIGURES_PDF) $(SLIDES_PDF)
+
+%.pdf: %.md
+	pandoc -t beamer $< -o $@
+
+%.pdf: %.tex
+	xelatex $<
+
+%.pdf: %.dot
+	dot -Tpdf $< -o $@
+
+clean:
+	rm -f $(SLIDES_PDF)
